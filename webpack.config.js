@@ -29,7 +29,11 @@ module.exports = {
                 exclude: /node_modules/,
                 use:['style-loader', 'css-loader'],
             },
-
+            {
+                test: /\.svg$/,
+                exclude: /node_modules/,
+                loader: 'svg-inline-loader'
+            },
         ],
     },
     externals: {
@@ -40,4 +44,4 @@ module.exports = {
         publicPath: '/',
         filename: 'main.js',
     },
-};
+}

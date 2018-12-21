@@ -1,6 +1,6 @@
 {
   "id": "com.mattermost.webapp-blog",
-  "name": "mediarepo",
+  "name": "blog",
   "description": "",
   "webapp": {
     "bundle_path": "main.js"
