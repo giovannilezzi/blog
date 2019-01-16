@@ -181,3 +181,7 @@ a:hover {
     outline: none;
     color:#fff;
 }
+
+.myHeartRed{
+    background-color: red;
+}
