@@ -35,4 +35,3 @@ class PostComponent extends React.Component{
 }
 
 export default PostComponent;
-

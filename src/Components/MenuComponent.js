@@ -46,15 +46,11 @@ class MenuComponent extends React.Component{
     render() {
         return (
             <ul className="topnav">
-                <li><a id='upload' className="active" href="#upload" onClick={this.allPosts}>Upload</a></li>
-                <li><a id='library' href="#library" onClick={this.createPost}>Library</a></li>
-                <li className="right"><a href="#about">About</a></li>
+                <li><a id='upload' className="active" href="#upload" onClick={this.allPosts}>AllPosts</a></li>
+                <li><a id='library' href="#library" onClick={this.createPost}>CreatePost</a></li>
             </ul>
         )
     }
 }
 
 export default MenuComponent;
-
-
-

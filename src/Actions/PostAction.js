@@ -9,7 +9,8 @@ export const receivedInsertPostResponse = (obj) => ({
 });
 
 export function handleSubmit(data) {
-    var url = 'http://localhost:3002/saveBlog'
+    var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavepost'
+    //'http://localhost:3002/savePost'
     return function (dispatch) {
         axios.post(url, JSON.stringify(data))
             .then((result) => {

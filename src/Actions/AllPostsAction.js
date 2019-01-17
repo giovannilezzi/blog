@@ -8,7 +8,7 @@ export const receivedPosts = (obj) => ({
     },
 });
 
-export function asyncCallAllPosts() {
+export function asyncCallGetAllPosts() {
     var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbgetallposts'
     //'http://localhost:3002/getAllBlog'
     return function (dispatch) {

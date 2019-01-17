@@ -11,8 +11,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        asyncCallAllPosts: () => {
-            dispatch(actions.asyncCallAllPosts());
+        asyncCallGetAllPosts: () => {
+            dispatch(actions.asyncCallGetAllPosts());
         }
     }
 }

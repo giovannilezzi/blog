@@ -8,7 +8,7 @@ class AllPostComponent extends React.Component{
     }
 
     componentWillMount() {
-        this.props.asyncCallAllPosts()
+        this.props.asyncCallGetAllPosts()
     }
 
     render() {
@@ -33,4 +33,3 @@ class AllPostComponent extends React.Component{
 }
 
 export default AllPostComponent
-
