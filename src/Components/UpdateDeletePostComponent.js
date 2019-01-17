@@ -4,7 +4,7 @@ import {Provider} from "react-redux";
 import store from "../Store/AppStore";
 import EditContainer from '../Containers/EditContainer'
 import $ from 'jquery'
-import CommentComponent from "./CommentComponent";
+import CommentContainer from '../Containers/CommentContainer'
 
 class UpdateDeletePostComponent extends Component {
 
@@ -56,7 +56,7 @@ class UpdateDeletePostComponent extends Component {
                 {
                     this.state.clicked?
 
-                        <CommentComponent/>
+                        <CommentContainer/>
 
                         :
 
