@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import * as actions from '../Actions/DeletePost';
+import * as actions from '../Actions/DeletePostAction';
 import UpdateDeletePostComponent from '../Components/UpdateDeletePostComponent'
 
 const mapStateToProps = (state) => {
@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         deletePost: (requestBody) => {
-            dispatch(actions.deletePost(requestBody))
+            dispatch(actions.deletePostAction(requestBody))
         }
     }
 }

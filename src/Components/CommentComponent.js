@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 
 class CommentComponent extends Component {
 
-    handleComment = () => {
-        alert("ciao")
+    handleComment = (e) => {
+        e.preventDefault();
+        const requestBody = {
+            Commento: this.getMessage.value,
+        }
+        this.props.handleComment(requestBody)
+        this.getMessage.value = '';
     }
 
     render() {

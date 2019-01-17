@@ -10,7 +10,7 @@ export const receivedPosts = (obj) => ({
 
 export function asyncCallGetAllPosts() {
     var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbgetallposts'
-    //'http://localhost:3002/getAllBlog'
+    //'http://localhost:3002/getAllPosts'
     return function (dispatch) {
         axios.get(url)
             .then((result) => {

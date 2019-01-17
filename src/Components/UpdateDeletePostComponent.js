@@ -36,11 +36,11 @@ class UpdateDeletePostComponent extends Component {
         if(!$("#myHeart").hasClass("myHeartRed")){
             $("#myHeart").addClass("myHeartRed")
         }else $("#myHeart").removeClass("myHeartRed")
+        // chimata al DB
     }
 
     addComment = () => {
         if(!this.state.clicked){
-            //$("#Comment").append(" <br /><br /> <textarea placeholder=\"Enter Post\" /><br /><br /> <button>Comment</button>")
             this.setState({clicked : true})
         }else this.setState({clicked : false})
     }
@@ -53,7 +53,6 @@ class UpdateDeletePostComponent extends Component {
                 <p className="post_message">{this.props.post.Corpo}</p>
                 <i id="myHeart" className="far fa-heart" onClick={this.like}></i>
                 <i className="fas fa-comments" onClick={this.addComment}></i>
-
                 {
                     this.state.clicked?
 

@@ -9,7 +9,7 @@ export const receivedDeletePostResponse = (obj) => ({
     },
 });
 
-export function deletePost(requestBody) {
+export function deletePostAction(requestBody) {
     var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbdeletepost'
     // 'http://localhost:3002/deleteBlog'
     return function (dispatch) {
