@@ -26,6 +26,7 @@ class UpdateDeletePostComponent extends Component {
 
     deletePost = () => {
         $( "#Prova" ).remove();
+        console.log()
         const requestBody = {
             Id: this.props.post.Id,
         }

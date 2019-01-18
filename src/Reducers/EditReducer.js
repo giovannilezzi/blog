@@ -22,6 +22,7 @@ const editReducer = (state = initialState, action) => {
                 </Provider>,
                 document.getElementById('page'),
             );
+           console.log("ciao")
             return { ...state, responseUpdatePost: action.payload.newValue}
 
         default:

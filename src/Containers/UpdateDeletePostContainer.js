@@ -4,7 +4,7 @@ import UpdateDeletePostComponent from '../Components/UpdateDeletePostComponent'
 
 const mapStateToProps = (state) => {
     return {
-        responseDeletePost: state.DeleteReducer.responseDeletePost,
+        responseDeletePost: state.DeleteReducer.responseDeletePost
     };
 };
 

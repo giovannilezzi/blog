@@ -10,9 +10,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleEdit: (post) => {
-            console.log(post)
-            dispatch(actions.handleEdit(post));
+        handleEdit: (requestBody) => {
+            console.log(requestBody)
+            dispatch(actions.handleEdit(requestBody));
         }
     }
 }

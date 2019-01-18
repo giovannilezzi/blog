@@ -9,10 +9,18 @@ export const receivedUpdatePostResponse = (obj) => ({
     },
 });
 
-export function handleEdit(post) {
-    console.log(post)
+export function handleEdit(data) {
+    var url = //'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavepost'
+    'http://localhost:3002/editPost'
     return function (dispatch) {
-        var response = "ok"
-        dispatch(receivedUpdatePostResponse(response))
-    }
+        axios.post(url, JSON.stringify(data))
+            .then((result) => {
+                const response = result.data;
+                const obj = response.Response
+                dispatch(receivedUpdatePostResponse(obj))
+            })
+            .catch((err) => {
+                console.log("Errore: " + err.response.data)
+            })
+    };
 }

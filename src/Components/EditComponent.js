@@ -2,8 +2,18 @@ import React, { Component } from 'react';
 
 class EditComponent extends Component {
 
-    handleEdit = () => {
-        this.props.handleEdit(this.props.post)
+    handleEdit = (e) => {
+        e.preventDefault();
+        console.log(this.props)
+        const requestBody = {
+            Id: (this.props.post.Id),
+            Titolo: this.getTitle.value,
+            Corpo: this.getMessage.value
+        }
+        console.log(requestBody)
+        this.props.handleEdit(requestBody)
+        this.getTitle.value = '';
+        this.getMessage.value = '';
     }
 
     render() {
