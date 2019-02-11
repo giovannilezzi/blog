@@ -10,8 +10,8 @@ export const receivedDeletePostResponse = (obj) => ({
 });
 
 export function deletePostAction(requestBody) {
-    var url = //'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbdeletepost'
-    'http://localhost:3002/deletePost'
+    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbdeletepost'
+    //'http://localhost:3002/deletePost'
     return function (dispatch) {
         axios.post(url, JSON.stringify(requestBody))
             .then((result) => {
