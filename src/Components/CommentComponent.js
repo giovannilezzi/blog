@@ -5,7 +5,9 @@ class CommentComponent extends Component {
     handleComment = (e) => {
         e.preventDefault();
         const requestBody = {
+            Proprietario: 'Michele',
             Commento: this.getMessage.value,
+            Idblog: this.props.postId
         }
         this.props.handleComment(requestBody)
         this.getMessage.value = '';

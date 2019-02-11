@@ -9,8 +9,8 @@ export const receivedCommentPostResponse = (obj) => ({
 });
 
 export function handleComment(data) {
-    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavepost'
-    //'http://localhost:3002/savePost'
+  //  var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavepost'
+    var url = 'http://localhost:3002/addComment'
     return function (dispatch) {
         axios.post(url, JSON.stringify(data))
             .then((result) => {

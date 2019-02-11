@@ -56,7 +56,7 @@ class UpdateDeletePostComponent extends Component {
                 {
                     this.state.clicked?
 
-                        <CommentContainer/>
+                        <CommentContainer postId={this.props.post.Id}/>
 
                         :
 
