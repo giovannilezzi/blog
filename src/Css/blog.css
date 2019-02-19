@@ -151,9 +151,6 @@ a:hover {
 }
 
 
-.control-buttons {
-    display:flex;
-}
 
 
 .delete {
@@ -230,4 +227,127 @@ ul.topnav li.right {float: right;}
 @media screen and (max-width: 600px) {
     ul.topnav li.right,
     ul.topnav li {float: none;}
+}
+
+
+/*Card Blog*/
+
+.tiles-flex {
+    margin-top: 10%;
+    margin-left: 6%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+}
+
+.tile {
+    border-top: 8px solid #343537;
+    background-color: #fff;
+    box-shadow: 0.5px 2px 4px 0 #bdbdbd;
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    -webkit-transition: 250ms;
+    transition: 250ms;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    will-change: transform;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    color: #2980B9;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tile .tile-divider {
+    height: 2px;
+    width: 100%;
+    margin: 0 5px;
+    border: .5px solid #343537;
+    background-color: #343537;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+
+.tile .tile-title {
+    font-size: 20px;
+    letter-spacing: .4px;
+    color: #153E7E ;
+    height: 89px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.tile .tile-description {
+    padding: 20px 0px;
+    font-size: 14px;
+    letter-spacing: .2px;
+    line-height: 1.25;
+    color: #1569C7;
+    margin: 0px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    justify-content: space-around;
+}
+
+.titoloFile{
+    font-size: 1rem;
+    padding: 0px 10px;}
+
+.underFile{
+    padding: 20px 10px;
+}
+
+.imageDelete{
+    margin-left: 10px;
+}
+
+.TitoloSurvey{
+    font-size: 1rem;
+    padding: 0px 10px;
+}
+
+
+.DescrizioneSurvey{
+    font-size: 1rem;
+    padding: 10px 10px;
+}
+
+.plus{
+
 }

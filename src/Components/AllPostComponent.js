@@ -25,7 +25,8 @@ class AllPostComponent extends React.Component{
             listItems = <h3 className="loading-indicator">Loading ...</h3>
 
         return (
-            <div>
+
+            <div className="tiles-flex">
                 {listItems}
             </div>
         )

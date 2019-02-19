@@ -48,11 +48,20 @@ class UpdateDeletePostComponent extends Component {
     render() {
         return (
 
-            <div id="Prova" className="post">
-                <h2 className="post_title">{this.props.post.Titolo}</h2>
-                <p className="post_message">{this.props.post.Corpo}</p>
+            <a id="Prova" className="tile">
+                <h2 className="tile-description"> <span className="TitoloSurvey">Titolo:  {this.props.post.Titolo} </span> </h2>
+
+                <span className="DescrizioneSurvey"> Descrizione: {this.props.post.Corpo}  </span>
+
+
+                <div className="plus">
                 <i id="myHeart" className="far fa-heart" onClick={this.like}></i>
                 <i className="fas fa-comments" onClick={this.addComment}></i>
+                </div>
+
+                <div className="tile-divider"></div>
+
+
                 {
                     this.state.clicked?
 
@@ -62,11 +71,14 @@ class UpdateDeletePostComponent extends Component {
 
                         <div></div>
                 }
-                <div id="Comment" className="control-buttons">
-                    <button className="edit" onClick={this.updatePost}>Edit</button>
-                    <button className="delete" onClick={this.deletePost}>Delete</button>
+
+                <div id="Comment" className="underFile">
+                    <img src="https://png.icons8.com/color/edit" onClick={this.updatePost}/>
+                    <img className="imageDelete" src="https://png.icons8.com/color/delete" onClick={this.deletePost} />
                 </div>
-            </div>
+
+
+            </a>
 
         );
     }
