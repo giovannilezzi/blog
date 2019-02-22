@@ -29,7 +29,6 @@ class PostComponent extends React.Component{
                     </form>
                 </div>
             </div>
-
         )
     }
 }

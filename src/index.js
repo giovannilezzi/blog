@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom';
 import './Css/blog.css';
 import { Provider } from 'react-redux';
 import store from './Store/AppStore'
-import PostContainer from './Containers/PostContainer'
-import MenuComponent from "./Components/MenuComponent";
-import AllPostContainer from './Containers/AllPostContainer'
 import $ from 'jquery'
+import AppContainer from "./Containers/AppContainer";
 
 var link = $('<link/>', {
     rel: 'stylesheet',
@@ -20,11 +18,7 @@ $('head').prepend(link);
 ReactDOM.render(
     <Provider store={store}>
         <div>
-            <MenuComponent/>
-        </div>
-
-        <div id="page">
-            <PostContainer/>
+            <AppContainer/>
         </div>
     </Provider>,
     document.getElementById('root')

@@ -39,7 +39,7 @@ class MenuComponent extends React.Component{
                     <PostContainer/>
                 </div>
             </Provider>,
-            document.getElementById('page'),
+            document.getElementById('root'),
         );
     }
 

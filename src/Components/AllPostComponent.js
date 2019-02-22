@@ -1,5 +1,9 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import ReactDOM from "react-dom";
 import UpdateDeletePostContainer from "../Containers/UpdateDeletePostContainer";
+import store from "../Store/AppStore";
+import PostContainer from '../Containers/PostContainer'
 
 class AllPostComponent extends React.Component{
 
@@ -9,6 +13,17 @@ class AllPostComponent extends React.Component{
 
     componentWillMount() {
         this.props.asyncCallGetAllPosts()
+    }
+
+    createPost = ( ) =>{
+        ReactDOM.render(
+            <Provider store={store}>
+                <div>
+                    <PostContainer/>
+                </div>
+            </Provider>,
+            document.getElementById('root'),
+        );
     }
 
     render() {
@@ -25,9 +40,9 @@ class AllPostComponent extends React.Component{
             listItems = <h3 className="loading-indicator">Loading ...</h3>
 
         return (
-
             <div className="tiles-flex">
                 {listItems}
+                <i className="fas fa-plus fa-3x" onClick={this.createPost}></i>
             </div>
         )
     }

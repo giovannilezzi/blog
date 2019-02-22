@@ -10,8 +10,8 @@ export const receivedUpdatePostResponse = (obj) => ({
 });
 
 export function handleEdit(data) {
-    var url = //'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavepost'
-    'http://localhost:3002/editPost'
+    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbeditpost'
+    //var url = 'http://localhost:3002/editPost'
     return function (dispatch) {
         axios.post(url, JSON.stringify(data))
             .then((result) => {
