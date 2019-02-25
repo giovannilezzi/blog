@@ -12,9 +12,12 @@ class AppComponent extends React.Component{
     render() {
         return (
             <div id= "appPreview">
-                <div className="navbarplugin">
-                    <h2 className="center ">Post It</h2>
-                </div>
+                <header className="headerBlog">
+                    <div id="logoBlog">
+                        <span className="iconBlog"> comment </span>
+                        <span> Blog<b>Post</b> </span>
+                    </div>
+                </header>
                 {
                     this.props.previewFileClicked?
                         <div className="preview">
