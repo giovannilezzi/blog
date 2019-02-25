@@ -37,7 +37,7 @@ class EditComponent extends Component {
                            defaultValue={this.props.post.Corpo} placeholder="Enter Post Title" /><br /><br />
 
                     <button className="  button2" onClick={this.handleEditFile} >
-                        <span className="NoteSpan" >Save Edit </span>
+                        <span >Save Edit </span>
                     </button>
                     <button className="  button3" onClick={this.closeEditFile}>
                         <span>Close</span>

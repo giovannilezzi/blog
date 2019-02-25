@@ -16,7 +16,6 @@ class AllPostComponent extends React.Component{
     }
 
     render() {
-        console.log(this.props.allPostLoaded)
         if (this.props.allPostLoaded) {
             this.props.asyncCallGetAllPosts()
         }
