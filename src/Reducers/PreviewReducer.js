@@ -2,18 +2,27 @@ import ActionTypes from "../Actions/ActionTypes";
 import React from "react";
 
 const initialState = {
-    previewFileClicked: null
+    previewFileClicked: false,
+    editFileClicked: false,
+    post: null
 }
 
 const postReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ActionTypes.RECEIVED_INSERT_POST_RESPONSE:
-            console.log(action.payload.newValue)
-            return { ...state, response: action.payload.newValue}
+        case ActionTypes.NEW_POST_CLICKED:
+            return { ...state, previewFileClicked:true}
 
-        case ActionTypes.RECEIVED_POSTS:
-            state.posts = []
-            return { ...state, posts: state.posts.concat(action.payload.newValue), isLoading: false};
+        case ActionTypes.RECEIVED_INSERT_POST_RESPONSE:
+            return { ...state, previewFileClicked:false}
+
+        case ActionTypes.EDIT_POST_CLICKED:
+            return { ...state, editFileClicked:true, post: action.payload.newValue}
+
+        case ActionTypes.RECEIVED_UPDATE_POST_RESPONSE:
+            return { ...state, editFileClicked:false}
+
+        case ActionTypes.CLOSE_EDIT_POST_CLICKED:
+            return {...state, editFileClicked:false}
 
         default:
             return state;

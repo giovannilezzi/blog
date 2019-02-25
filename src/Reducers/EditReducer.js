@@ -14,15 +14,6 @@ const editReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case ActionTypes.RECEIVED_UPDATE_POST_RESPONSE:
-            ReactDOM.render(
-                <Provider store={store}>
-                    <div>
-                        <AllPostContainer/>
-                    </div>
-                </Provider>,
-                document.getElementById('page'),
-            );
-           console.log("ciao")
             return { ...state, responseUpdatePost: action.payload.newValue}
 
         default:

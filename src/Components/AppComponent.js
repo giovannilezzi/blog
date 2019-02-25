@@ -1,6 +1,7 @@
 import React from "react";
 import AllPostContainer from '../Containers/AllPostContainer'
 import PostContainer from '../Containers/PostContainer'
+import EditContainer from '../Containers/EditContainer'
 
 class AppComponent extends React.Component{
 
@@ -11,8 +12,8 @@ class AppComponent extends React.Component{
     render() {
         return (
             <div id= "appPreview">
-                <div className="preview">
-                    <PostContainer/>
+                <div className="navbarplugin">
+                    <h2 className="center ">Post It</h2>
                 </div>
                 {
                     this.props.previewFileClicked?
@@ -22,10 +23,10 @@ class AppComponent extends React.Component{
                         :
                         <div></div>
                 }
-
                 {
                     this.props.editFileClicked?
                         <div className="preview">
+                            <EditContainer post={this.props.post}/>
                         </div>
                         :
                         <div></div>
@@ -41,6 +42,3 @@ class AppComponent extends React.Component{
 }
 
 export default AppComponent;
-
-
-

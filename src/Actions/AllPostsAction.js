@@ -23,3 +23,9 @@ export function asyncCallGetAllPosts() {
             })
     };
 }
+
+
+export const newPostClicked = () => ({
+    type: ActionTypes.NEW_POST_CLICKED,
+});
+

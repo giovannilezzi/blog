@@ -11,8 +11,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         handleEdit: (requestBody) => {
-            console.log(requestBody)
             dispatch(actions.handleEdit(requestBody));
+        },
+        closeEditFile: () => {
+            dispatch(actions.closeEditFile());
         }
     }
 }

@@ -1,12 +1,11 @@
 import ActionTypes from "./ActionTypes";
 import axios from "axios";
-import {receivedInsertPostResponse} from "./PostAction";
 
 export const receivedUpdatePostResponse = (obj) => ({
     type: ActionTypes.RECEIVED_UPDATE_POST_RESPONSE,
     payload: {
         newValue: obj
-    },
+    }
 });
 
 export function handleEdit(data) {
@@ -24,3 +23,15 @@ export function handleEdit(data) {
             })
     };
 }
+
+export const editPostClicked = (obj) => ({
+    type: ActionTypes.EDIT_POST_CLICKED,
+    payload: {
+        newValue: obj
+    }
+})
+
+export const closeEditFile = () => ({
+    type: ActionTypes.CLOSE_EDIT_POST_CLICKED,
+})
+

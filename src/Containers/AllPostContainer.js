@@ -5,7 +5,8 @@ import AllPostComponent from "../Components/AllPostComponent";
 const mapStateToProps = (state) => {
     return {
         posts: state.PostReducer.posts,
-        isLoading: state.PostReducer.isLoading
+        isLoading: state.PostReducer.isLoading,
+        allPostLoaded: state.PostReducer.allPostLoaded
     };
 };
 
@@ -13,6 +14,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         asyncCallGetAllPosts: () => {
             dispatch(actions.asyncCallGetAllPosts());
+        },
+        newPostClicked: () => {
+            dispatch(actions.newPostClicked());
         }
     }
 }

@@ -44,10 +44,8 @@ a:hover {
 
 /* Post Styles */
 .post-container {
-    background:#fff;
-    padding:50px;
-    width:90%;
-    margin:40px auto;
+    /*padding:50px;*/
+   /* width:90%;*/
     box-shadow:0 5px 15px 0 rgba(46, 61, 73, 0.12);
     font-family:'Work Sans',sans-serif;
 }
@@ -350,4 +348,84 @@ ul.topnav li.right {float: right;}
 
 .plus{
 
+}
+
+#appPreview {
+    width: 100%;
+    height: 100%;
+}
+
+.preview {
+    z-index: 10;
+}
+
+#navi, .preview {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+.firstDiv {
+    margin-top: 10%;
+}
+
+.myPost {
+    width: 100%;
+    height: 100%;
+}
+
+.myOpacity{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,1);
+    opacity: 0.5;
+}
+
+.myForm{
+    z-index: 10;
+    position: absolute;
+    top: 18%;
+    left: 19%;
+    background: white;
+    width: 62%;
+    height: 53%;
+}
+
+.myPost {
+    width: 100%;
+    height: 100%
+}
+
+.myOpacity {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,1);
+    opacity: 0.5;
+}
+
+.myForm {
+    z-index: 10;
+    position: absolute;
+    left: 40%;
+    background: white;
+    width: auto;
+    border-radius: 30px;
+}
+
+.insertEdit{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    border-color: transparent;
+    height: 30%;
+    font-size:calc(10px + 2vmin);
+    text-align: center;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+    margin-left: 25%;
 }

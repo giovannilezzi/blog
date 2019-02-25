@@ -3,9 +3,10 @@ import AppComponent from '../Components/AppComponent'
 
 const mapStateToProps = (state) => {
     return {
-        previewFileClicked: this.PreviewReducer.previewFileClicked
+        previewFileClicked: state.PreviewReducer.previewFileClicked,
+        editFileClicked: state.PreviewReducer.editFileClicked,
+        post: state.PreviewReducer.post
     }
-
 };
 
 //const mapDispatchToProps = (dispatch) => {}

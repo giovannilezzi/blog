@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 
 class EditComponent extends Component {
 
-    handleEdit = (e) => {
+    componentDidMount() {
+        console.log(window.pageYOffset.toString() + "px")
+        document.getElementById("opacita").style.marginTop = window.pageYOffset.toString() + "px";
+    }
+
+    handleEditFile = (e) => {
         e.preventDefault();
         console.log(this.props)
         const requestBody = {
@@ -16,18 +21,31 @@ class EditComponent extends Component {
         this.getMessage.value = '';
     }
 
+    closeEditFile = () => {
+        this.props.closeEditFile()
+    }
+
     render() {
+        console.log(window.pageYOffset)
         return (
-            <div key={this.props.post.Id} className="post">
-                <form className="form" onSubmit={this.handleEdit}>
-                    <input required type="text" ref={(input) => this.getTitle = input}
-                           defaultValue={this.props.post.Titolo} placeholder="Enter Post Title" /><br /><br />
-                    <textarea required rows="5" ref={(input) => this.getMessage = input}
-                              defaultValue={this.props.post.Corpo} cols="28" placeholder="Enter Post" /><br /><br />
-                    <button>Update</button>
-                </form>
+            <div className="myPost">
+            <div id="opacita" className="myOpacity"></div>
+                <div className="myForm ">
+                    <input className="insertEdit" required type="text" ref={(input) => this.getTitle = input}
+                           defaultValue={this.props.post.Titolo} placeholder="Enter new File Name" /><br /><br />
+                    <input className="insertEdit" required type="text" ref={(input) => this.getMessage = input}
+                           defaultValue={this.props.post.Corpo} placeholder="Enter Post Title" /><br /><br />
+
+                    <button className="  button2" onClick={this.handleEditFile} >
+                        <span className="NoteSpan" >Save Edit </span>
+                    </button>
+                    <button className="  button3" onClick={this.closeEditFile}>
+                        <span>Close</span>
+                    </button>
+                </div>
             </div>
         );
     }
 }
+
 export default EditComponent

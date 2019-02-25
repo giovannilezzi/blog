@@ -15,17 +15,11 @@ class UpdateDeletePostComponent extends Component {
         }
     }
 
-    updatePost = () => {
-        ReactDOM.render(
-            <Provider store={store}>
-                <EditContainer post = {this.props.post} />
-            </Provider>,
-            document.getElementById('page')
-        )
+    editPostClicked = () => {
+        this.props.editPostClicked(this.props.post)
     }
 
     deletePost = () => {
-        $( "#Prova" ).remove();
         const requestBody = {
             Id: this.props.post.Id,
         }
@@ -73,11 +67,9 @@ class UpdateDeletePostComponent extends Component {
                 }
 
                 <div id="Comment" className="underFile">
-                    <img src="https://png.icons8.com/color/edit" onClick={this.updatePost}/>
+                    <img src="https://png.icons8.com/color/edit" onClick={this.editPostClicked}/>
                     <img className="imageDelete" src="https://png.icons8.com/color/delete" onClick={this.deletePost} />
                 </div>
-
-
             </a>
 
         );
