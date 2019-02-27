@@ -32,10 +32,12 @@ class AllPostComponent extends React.Component{
             listItems = <h3 className="loading-indicator">Loading ...</h3>
 
         return (
-            <div className= "firstDiv">
+            <div className= "firstDivBlog">
+                <a className="btn-toolsetBlog " onClick={this.createPost}>
+                    <strong>Add Blog</strong>
+                </a>
                 <div className="tiles-flex">
                     {listItems}
-                    <i className="fas fa-plus fa-3x" onClick={this.createPost}></i>
                 </div>
             </div>
         )

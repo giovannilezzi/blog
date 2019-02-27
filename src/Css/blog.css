@@ -6,20 +6,6 @@
     letter-spacing: 4px;
     font-family:'Work Sans',sans-serif;
 }
-/*
-a {
-    color:#636363;
-    text-decoration: none;
-    transition:all 0.5s ease-in;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-*/
-
-
-/* Navigation */
 
 
 .navbarplugin {
@@ -361,18 +347,29 @@ ul.topnav li.right {float: right;}
     z-index: 10;
 }
 
-#navi, .preview {
+#navi {
     width: 100%;
     height: 100%;
     position: absolute;
-
+    background-color: #f4f4ef;
+}
+@media screen and (max-width: 1400px) {
+    #navi {
+        height: auto;
+    }
 }
 
-.firstDiv {
-    margin-top: 10%;
+
+.preview {
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
-.myForm{
+.firstDivBlog {
+}
+
+.myFormBlog, .myFormEditBlog{
     z-index: 10;
     position: absolute;
     top: 18%;
@@ -383,23 +380,28 @@ ul.topnav li.right {float: right;}
     left: 40%;
 }
 @media screen and (max-width: 1350px) {
-    .myForm {
+    .myFormBlog {
         left: 35%;
     }
 }
 @media screen and (max-width: 800px) {
-    .myForm {
+    .myFormBlog {
         left: 30%;
     }
 }
 @media screen and (max-width: 600px) {
-    .myForm {
+    .myFormBlog {
         left: 25%;
     }
 }
 @media screen and (max-width: 400px) {
-    .myForm {
-        left: 22%;
+    .myFormBlog {
+        left: 15%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .myFormEditBlog {
+        left: 21%;
     }
 }
 
@@ -503,4 +505,58 @@ ul.topnav li.right {float: right;}
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'liga';
+}
+
+
+
+/*Bottone per add*/
+
+.btn-toolsetBlog {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    color: #006FE6;
+    text-decoration: none;
+    line-height: 1.2;
+    font-weight: normal;
+    font-family: sans-serif;
+    font-size: 18px;
+    background-color: #f9fbff;
+    border-radius: 30px;
+    padding: 17px 50px;
+    border: 1px solid #006FE6;
+    cursor: pointer;
+    margin-bottom: 5%;
+    margin-top: 30px;
+    margin-left: 45%;
+}
+@media screen and (max-width: 1200px) {
+    .btn-toolsetBlog {
+        margin-top: 35px;
+        margin-left: 44%;
+
+    }
+}
+@media screen and (max-width: 900px) {
+    .btn-toolsetBlog {
+        margin-top: 10%;
+        margin-left: 40%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .btn-toolsetBlog {
+        margin-top: 10%;
+        margin-left: 35%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .btn-toolsetBlog {
+        margin-top: 10%;
+        margin-left: 24%;
+    }
+}
+.btn-toolsetBlog:hover {
+    background-color: #006FE6;
+    border-color: #f9fbff;
+    color: #f9fbff;
 }

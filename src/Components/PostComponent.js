@@ -17,7 +17,7 @@ class PostComponent extends React.Component{
         return (
                 <div className="post-container myPost">
                     <div className="myOpacity"></div>
-                    <div className="myForm">
+                    <div className="myFormBlog">
                         <h1 className="post_heading">Create Post</h1>
                         <form className="form" onSubmit={this.handleSubmit} >
                             <input required type="text" ref={(input) => this.getTitle = input} placeholder="Enter Post Title" /><br /><br />

@@ -26,7 +26,7 @@ class EditComponent extends Component {
         return (
             <div className="myPost">
             <div id="opacita" className="myOpacity"></div>
-                <div className="myForm ">
+                <div className="myFormEditBlog ">
                     <input className="insertEdit" required type="text" ref={(input) => this.getTitle = input}
                            defaultValue={this.props.post.Titolo} placeholder="Enter new File Name" /><br /><br />
                     <input className="insertEdit" required type="text" ref={(input) => this.getMessage = input}
