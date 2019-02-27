@@ -39,9 +39,7 @@ class AppComponent extends React.Component{
                 </div>
             </div>
         )
-
     }
-
 }
 
 export default AppComponent;

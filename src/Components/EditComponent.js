@@ -3,19 +3,16 @@ import React, { Component } from 'react';
 class EditComponent extends Component {
 
     componentDidMount() {
-        console.log(window.pageYOffset.toString() + "px")
         document.getElementById("opacita").style.marginTop = window.pageYOffset.toString() + "px";
     }
 
     handleEditFile = (e) => {
         e.preventDefault();
-        console.log(this.props)
         const requestBody = {
             Id: (this.props.post.Id),
             Titolo: this.getTitle.value,
             Corpo: this.getMessage.value
         }
-        console.log(requestBody)
         this.props.handleEdit(requestBody)
         this.getTitle.value = '';
         this.getMessage.value = '';
@@ -26,7 +23,6 @@ class EditComponent extends Component {
     }
 
     render() {
-        console.log(window.pageYOffset)
         return (
             <div className="myPost">
             <div id="opacita" className="myOpacity"></div>
