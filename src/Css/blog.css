@@ -272,7 +272,6 @@ ul.topnav li.right {float: right;}
 
 @media screen and (max-width: 1250px) {
     .tileBlog {
-        height: 150px;
         width: 150px;
     }
 }
