@@ -125,7 +125,6 @@
     word-wrap: break-word;
 }
 
-
 .post_message {
     font-size:25px;
     font-weight: 200;
@@ -133,9 +132,6 @@
     text-align:center;
     word-wrap: break-word
 }
-
-
-
 
 .delete {
     background: #ff7777;
@@ -148,7 +144,6 @@
     outline: none;
     color:#fff;
 }
-
 
 .edit {
     background:#02b3e4;;
@@ -216,8 +211,7 @@ ul.topnav li.right {float: right;}
 
 /*Card Blog*/
 
-.tiles-flex {
-    margin-top: 10%;
+.tiles-flexBlog {
     margin-left: 6%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -229,10 +223,19 @@ ul.topnav li.right {float: right;}
     justify-content: center;
     -webkit-box-align: center;
 }
+@media screen and (max-width: 770px) {
+    .tiles-flexBlog {
+        display: block;
+        margin-left: 0%;
 
-.tile {
+
+    }
+}
+
+
+.tileBlog {
     border-top: 8px solid #343537;
-    background-color: #fff;
+    background-color: #f0fffa;
     box-shadow: 0.5px 2px 4px 0 #bdbdbd;
     width: 200px;
     height: auto;
@@ -267,7 +270,29 @@ ul.topnav li.right {float: right;}
 
 }
 
-.tile .tile-divider {
+@media screen and (max-width: 1250px) {
+    .tileBlog {
+        height: 150px;
+        width: 150px;
+    }
+}
+@media screen and (max-width: 770px) {
+    .tileBlog {
+        width: 100%;
+        height: 50px;
+
+    }
+}
+/*
+@media screen and (max-width: 770px) {
+    .tileBlog {
+        width: 100%;
+        height: 50px;
+
+    }
+}*/
+
+.tileBlog .tile-dividerBlog {
     height: 2px;
     width: 100%;
     margin: 0 5px;
@@ -277,7 +302,13 @@ ul.topnav li.right {float: right;}
     align-self: auto;
 }
 
-.tile .tile-title {
+@media screen and (max-width: 770px) {
+    .tile-dividerBlog {
+        display: none;
+    }
+}
+
+.tileBlog .tile-title {
     font-size: 20px;
     letter-spacing: .4px;
     color: #153E7E ;
@@ -297,7 +328,7 @@ ul.topnav li.right {float: right;}
     justify-content: space-around;
 }
 
-.tile .tile-description {
+.tileBlog .tile-descriptionBlog {
     padding: 20px 0px;
     font-size: 14px;
     letter-spacing: .2px;
@@ -310,33 +341,55 @@ ul.topnav li.right {float: right;}
     -ms-flex-direction: column;
     justify-content: space-around;
 }
+@media screen and (max-width: 770px) {
+    .tile-descriptionBlog {
+        font-size: 11px;
+        margin-left: -30%;
+        margin-top: -20px !important;
+    }
+}
 
 .titoloFile{
     font-size: 1rem;
     padding: 0px 10px;}
 
-.underFile{
+.underBlog{
     padding: 20px 10px;
+}
+@media screen and (max-width: 770px) {
+    .underBlog {
+        padding: 0px 0px    }
 }
 
 .imageDelete{
     margin-left: 10px;
 }
 
-.TitoloSurvey{
+.TitoloBlog{
     font-size: 1rem;
     padding: 0px 10px;
 }
 
 
-.DescrizioneSurvey{
+
+.DescrizioneBlog{
     font-size: 1rem;
     padding: 10px 10px;
 }
-
-.plus{
-
+@media screen and (max-width: 1250px) {
+    .DescrizioneBlog {
+        padding: 0px 10px;
+        margin-left: -12%;
+    }
 }
+@media screen and (max-width: 770px) {
+    .DescrizioneBlog {
+        margin-top: 25px;
+        margin-left: -160px;
+    }
+}
+
+
 
 #appPreview {
     width: 100%;
@@ -380,22 +433,22 @@ ul.topnav li.right {float: right;}
     left: 40%;
 }
 @media screen and (max-width: 1350px) {
-    .myFormBlog {
+    .myFormBlog, .myFormEditBlog {
         left: 35%;
     }
 }
 @media screen and (max-width: 800px) {
-    .myFormBlog {
+    .myFormBlog, .myFormEditBlog {
         left: 30%;
     }
 }
 @media screen and (max-width: 600px) {
-    .myFormBlog {
+    .myFormBlog, .myFormEditBlog {
         left: 25%;
     }
 }
 @media screen and (max-width: 400px) {
-    .myFormBlog {
+    .myFormBlog, .myFormEditBlog  {
         left: 15%;
     }
 }

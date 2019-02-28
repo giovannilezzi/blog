@@ -42,10 +42,10 @@ class UpdateDeletePostComponent extends Component {
     render() {
         return (
 
-            <a id="Prova" className="tile">
-                <h2 className="tile-description"> <span className="TitoloSurvey">Titolo:  {this.props.post.Titolo} </span> </h2>
+            <a id="Prova" className="tileBlog">
+                <h2 className="tile-descriptionBlog"> <span className="TitoloBlog">Titolo:  {this.props.post.Titolo} </span> </h2>
 
-                <span className="DescrizioneSurvey"> Descrizione: {this.props.post.Corpo}  </span>
+                <span className="DescrizioneBlog"> Descrizione: {this.props.post.Corpo}  </span>
 
 
                 <div className="plus">
@@ -53,7 +53,7 @@ class UpdateDeletePostComponent extends Component {
                 <i className="fas fa-comments" onClick={this.addComment}></i>
                 </div>
 
-                <div className="tile-divider"></div>
+                <div className="tile-dividerBlog"></div>
 
 
                 {
