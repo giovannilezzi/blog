@@ -5,7 +5,8 @@ const mapStateToProps = (state) => {
     return {
         previewFileClicked: state.PreviewReducer.previewFileClicked,
         editFileClicked: state.PreviewReducer.editFileClicked,
-        post: state.PreviewReducer.post
+        post: state.PreviewReducer.post,
+        viewPostClicked: state.PreviewReducer.viewPostClicked
     }
 };
 

@@ -8,5 +8,7 @@ export default keyMirror({
     RECEIVED_COMMENT_POST : null,
     NEW_POST_CLICKED: null,
     EDIT_POST_CLICKED: null,
-    CLOSE_EDIT_POST_CLICKED: null
+    CLOSE_EDIT_POST_CLICKED: null,
+    VIEW_POST: null,
+    CLOSE_POST: null
 })

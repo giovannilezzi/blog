@@ -2,6 +2,7 @@ import React from "react";
 import AllPostContainer from '../Containers/AllPostContainer'
 import PostContainer from '../Containers/PostContainer'
 import EditContainer from '../Containers/EditContainer'
+import ViewPostContainer from '../Containers/ViewPostContainer'
 
 class AppComponent extends React.Component{
 
@@ -30,6 +31,14 @@ class AppComponent extends React.Component{
                     this.props.editFileClicked?
                         <div className="preview">
                             <EditContainer post={this.props.post}/>
+                        </div>
+                        :
+                        <div></div>
+                }
+                {
+                    this.props.viewPostClicked?
+                        <div className="preview">
+                            <ViewPostContainer post={this.props.post}/>
                         </div>
                         :
                         <div></div>

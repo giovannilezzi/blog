@@ -34,7 +34,7 @@ class AllPostComponent extends React.Component{
         return (
             <div className= "firstDivBlog">
                 <a className="btn-toolsetBlog " onClick={this.createPost}>
-                    <strong>Add Blog</strong>
+                    <strong>Add Post</strong>
                 </a>
                 <div className="tiles-flexBlog">
                     {listItems}

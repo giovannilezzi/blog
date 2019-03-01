@@ -39,39 +39,30 @@ class UpdateDeletePostComponent extends Component {
         }else this.setState({clicked : false})
     }
 
+    viewPost = () => {
+        this.props.viewPost(this.props.post)
+    }
+
     render() {
         return (
-
             <a id="Prova" className="tileBlog">
-                <h2 className="tile-descriptionBlog"> <span className="TitoloBlog">Titolo:  {this.props.post.Titolo} </span> </h2>
-
-                <span className="DescrizioneBlog"> Descrizione: {this.props.post.Corpo}  </span>
-
-
+                <h2 className="tile-descriptionBlog" onClick={this.viewPost}> <span className="TitoloBlog">{this.props.post.Titolo} </span> </h2>
                 <div className="plus">
                 <i id="myHeart" className="far fa-heart" onClick={this.like}></i>
                 <i className="fas fa-comments" onClick={this.addComment}></i>
                 </div>
-
                 <div className="tile-dividerBlog"></div>
-
-
                 {
                     this.state.clicked?
-
                         <CommentContainer postId={this.props.post.Id}/>
-
                         :
-
                         <div></div>
                 }
-
                 <div id="Comment" className="underFile">
                     <img src="https://png.icons8.com/color/edit" onClick={this.editPostClicked}/>
                     <img className="imageDelete" src="https://png.icons8.com/color/delete" onClick={this.deletePost} />
                 </div>
             </a>
-
         );
     }
 }

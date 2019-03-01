@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import * as deletePostAction from '../Actions/DeletePostAction';
 import * as editActions from '../Actions/EditAction';
+import * as viewPostAction from '../Actions/ViewPostAction';
 import UpdateDeletePostComponent from '../Components/UpdateDeletePostComponent'
 
 const mapStateToProps = (state) => {
@@ -17,6 +18,9 @@ const mapDispatchToProps = (dispatch) => {
 
         editPostClicked: (post) => {
             dispatch(editActions.editPostClicked(post))
+        },
+        viewPost: (post) => {
+            dispatch(viewPostAction.viewPost(post))
         }
     }
 }

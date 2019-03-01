@@ -4,7 +4,8 @@ import React from "react";
 const initialState = {
     previewFileClicked: false,
     editFileClicked: false,
-    post: null
+    post: null,
+    viewPostClicked: false
 }
 
 const postReducer = (state = initialState, action) => {
@@ -23,6 +24,12 @@ const postReducer = (state = initialState, action) => {
 
         case ActionTypes.CLOSE_EDIT_POST_CLICKED:
             return {...state, editFileClicked:false}
+
+        case ActionTypes.VIEW_POST:
+            return {...state, viewPostClicked:true, post: action.payload.newValue}
+
+        case ActionTypes.CLOSE_POST:
+            return {...state, viewPostClicked:false}
 
         default:
             return state;

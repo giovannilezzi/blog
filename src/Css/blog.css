@@ -631,7 +631,31 @@ ul.topnav li.right {float: right;}
     }
 }
 .btn-toolsetBlog:hover {
-    background-color: #006FE6;
-    border-color: #f9fbff;
-    color: #f9fbff;
+    background-color: #006FE6 !important;
+    border-color: #f9fbff !important;
+    color: #f9fbff !important;
+}
+
+.coprpoPost{
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: justify;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.myFormViewPost{
+    z-index: 10;
+    position: absolute;
+    top: 18%;
+    background: white;
+    height: 53%;
+    border-radius: 30px;
+    width: auto;
+    left: 2%;
+    right: 2%;
+    text-align: justify;
+    padding: 0px 20px;
 }

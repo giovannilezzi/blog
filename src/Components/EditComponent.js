@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 
 class EditComponent extends Component {
 
-    componentDidMount() {
+    /*componentDidMount() {
         document.getElementById("opacitaEditBlog").style.marginTop = document.getElementById("post-list").scrollTop + "px";
         //document.getElementsByClassName("myOpacityCalendar")[0].style.height = Math.max( document.body.scrollHeight) + "px"
         document.getElementById("post-list").style.overflowY = "hidden"
         document.getElementsByClassName("myOpacityCalendarEditBlog")[0].style.marginTop = document.getElementById("post-list").scrollTop + "px"
-    }
+    }*/
 
     handleEditFile = (e) => {
         e.preventDefault();
