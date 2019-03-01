@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 class EditComponent extends Component {
 
     componentDidMount() {
-        document.getElementById("opacita").style.marginTop = window.pageYOffset.toString() + "px";
+        document.getElementById("opacitaEditBlog").style.marginTop = document.getElementById("post-list").scrollTop + "px";
+        //document.getElementsByClassName("myOpacityCalendar")[0].style.height = Math.max( document.body.scrollHeight) + "px"
+        document.getElementById("post-list").style.overflowY = "hidden"
+        document.getElementsByClassName("myOpacityCalendarEditBlog")[0].style.marginTop = document.getElementById("post-list").scrollTop + "px"
     }
 
     handleEditFile = (e) => {
@@ -25,8 +28,8 @@ class EditComponent extends Component {
     render() {
         return (
             <div className="myPost">
-            <div id="opacita" className="myOpacity"></div>
-                <div className="myFormEditBlog ">
+            <div className="myOpacityCalendarEditBlog"></div>
+                <div id="opacitaEditBlog" className="myFormEditBlog ">
                     <input className="insertEdit" required type="text" ref={(input) => this.getTitle = input}
                            defaultValue={this.props.post.Titolo} placeholder="Enter new File Name" /><br /><br />
                     <input className="insertEdit" required type="text" ref={(input) => this.getMessage = input}

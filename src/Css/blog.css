@@ -463,13 +463,36 @@ ul.topnav li.right {float: right;}
     height: 100%
 }
 
-.myOpacity {
+.myOpacityBlog {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,1);
     opacity: 0.5;
 }
 
+.myOpacityBlogAdd {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,1);
+    opacity: 0.5;
+}
+@media screen and (max-width: 1750px) {
+    .myOpacityBlogAdd {
+        height: 300%;
+    }
+}
+
+.myOpacityCalendarEditBlog {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,1);
+    opacity: 0.5;
+}
+@media screen and (max-width: 1750px) {
+    .myOpacityCalendarEditBlog {
+        height: 300%;
+    }
+}
 
 .insertEdit{
     width: 80%;
