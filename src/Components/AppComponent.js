@@ -10,7 +10,13 @@ class AppComponent extends React.Component{
         super(props);
     }
 
+    newPostClicked = ( ) =>{
+        this.props.newPostClicked()
+    }
+
     render() {
+        //document.getElementById("post-list").style.overflowY = "scroll"
+        document.body.style.overflowY = "scroll"
         return (
             <div id= "appPreview">
                 <header className="headerBlog">
@@ -46,6 +52,7 @@ class AppComponent extends React.Component{
                 <div id="navi">
                     <AllPostContainer/>
                 </div>
+                <i className="plusButtonBottomRight fas fa-plus fa-3x" onClick={this.newPostClicked}></i>
             </div>
         )
     }

@@ -48,10 +48,10 @@ class UpdateDeletePostComponent extends Component {
             <a id="Prova" className="tileBlog">
                 <h2 className="tile-descriptionBlog" onClick={this.viewPost}> <span className="TitoloBlog">{this.props.post.Titolo} </span> </h2>
                 <div className="plus">
-                <i id="myHeart" className="far fa-heart" onClick={this.like}></i>
                 <i className="fas fa-comments" onClick={this.addComment}></i>
                 </div>
                 <div className="tile-dividerBlog"></div>
+
                 {
                     this.state.clicked?
                         <CommentContainer postId={this.props.post.Id}/>

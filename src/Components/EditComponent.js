@@ -6,7 +6,7 @@ class EditComponent extends Component {
         document.getElementById("opacitaEditBlog").style.marginTop = document.getElementById("post-list").scrollTop + "px";
         //document.getElementsByClassName("myOpacityCalendar")[0].style.height = Math.max( document.body.scrollHeight) + "px"
         document.getElementById("post-list").style.overflowY = "hidden"
-        document.getElementsByClassName("myOpacityCalendarEditBlog")[0].style.marginTop = document.getElementById("post-list").scrollTop + "px"
+        document.getElementsByClassName("myOpacityEditBlog")[0].style.marginTop = document.getElementById("post-list").scrollTop + "px"
     }*/
 
     handleEditFile = (e) => {
@@ -28,7 +28,7 @@ class EditComponent extends Component {
     render() {
         return (
             <div className="myPost">
-            <div className="myOpacityCalendarEditBlog"></div>
+            <div className="myOpacityEditBlog"></div>
                 <div id="opacitaEditBlog" className="myFormEditBlog ">
                     <input className="insertEdit" required type="text" ref={(input) => this.getTitle = input}
                            defaultValue={this.props.post.Titolo} placeholder="Enter new File Name" /><br /><br />

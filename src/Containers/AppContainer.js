@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import AppComponent from '../Components/AppComponent'
+import * as actions from "../Actions/AllPostsAction";
 
 const mapStateToProps = (state) => {
     return {
@@ -10,11 +11,20 @@ const mapStateToProps = (state) => {
     }
 };
 
-//const mapDispatchToProps = (dispatch) => {}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        asyncCallGetAllPosts: () => {
+            dispatch(actions.asyncCallGetAllPosts());
+        },
+        newPostClicked: () => {
+            dispatch(actions.newPostClicked());
+        }
+    }
+}
 
 const AppContainer = connect(
     mapStateToProps,
-    null,
+    mapDispatchToProps,
 )(AppComponent);
 
 export default AppContainer
